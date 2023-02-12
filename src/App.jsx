@@ -1,6 +1,3 @@
-import socketIO from 'socket.io-client';
-const socket = socketIO.connect(`${import.meta.env.VITE_SERVER}`);
-
 function App() {
   return (
     <div className="flex flex-col gap-5 w-screen h-screen bg-gray-900">
