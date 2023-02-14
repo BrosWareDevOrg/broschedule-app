@@ -55,10 +55,10 @@ function App() {
               </div>
               <div className="flex">
                 <span className="material-symbols-outlined cursor-pointer">
-                  keyboard_double_arrow_right
+                  chevron_right
                 </span>
                 <span className="material-symbols-outlined cursor-pointer">
-                  chevron_right
+                  keyboard_double_arrow_right
                 </span>
               </div>
             </div>
