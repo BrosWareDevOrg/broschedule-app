@@ -213,70 +213,120 @@ function App() {
           <div className="w-full max-h-[350px] p-4 rounded-lg overflow-y-scroll bg-gray-400">
             <div className="flex gap-3 flex-col max-h-full">
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={false} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={false}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Disponible</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={false} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={false}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Disponible</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={false} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={false}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Disponible</h2>
                   <p>8:00 - 9:00</p>
                 </div>
               </div>
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
-                <input type="checkbox" disable checked={true} className="peer hidden" />
+                <input
+                  type="checkbox"
+                  disable
+                  checked={true}
+                  className="peer hidden"
+                />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
                   <h2>Ocupado</h2>
                   <p>8:00 - 9:00</p>
