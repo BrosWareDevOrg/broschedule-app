@@ -1,32 +1,33 @@
-# Schedule Social App.
+# Schedulo App.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+'Schedulo' is a platform that allows users to book appointments with service providers and enables service providers to manage their schedules and appointments. Users can register and log in to the website to search for service providers based on their location, service type, availability, and ratings. They can book appointments with service providers and cancel them if necessary. Service providers can manage their schedules, view and confirm new appointments, and mark completed appointments. Users can also provide reviews and ratings for service providers to help other users in choosing the right provider. This web app can be a valuable tool for users and service providers to streamline the appointment booking process and manage schedules efficiently.
 
+## How to run this project
 
-### Install dependencies
+#### Clone this repository
 
+    git clone https://github.com/brosware/broschedule-app.git
+
+#### Install dependencies
+
+    cd broschedule-app
     npm install
 
-### Setup environment file
-create a file at root called `.env` and add this:
+#### Setup environment file
 
-    REACT_APP_API=<server url>
+Create a file at root called `.env` and add this:
 
-### Run App
-    npm start
+    VITE_SERVER=<server url>
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Run the application
 
-
-### Check Lint errors
-    npm run lint
-
-### Fix Lint errors
-    npm run lint:fix
+    npm run dev
 
 <br>
+
+## Tech Stack
+
+A tech stack, short for technology stack, is a set of technologies used to build this web application. It includes a combination of programming languages, frameworks, libraries, and tools that are used to develop this application.
 
 |Tech | Description  |
 | :-----: | :-----: |
@@ -43,17 +44,12 @@ You will also see any lint errors in the console.
 
 |Photo | Name  | Mail | Github
 | :-----: | :-----: | :-----: | :-----: |
-<img src="https://avatars.githubusercontent.com/u/25555726?v=4" height="50" width="50">| Dario Marañes | dario.sjs@gmail.com | [@mara666](https://github.com/mara666)
 <img src="https://avatars.githubusercontent.com/u/84218482?v=4" height="50" width="50">| Damian Palavecino | damianpalavecino25@gmail.com | [@DamianPalavecino](https://github.com/DamianPalavecino)
-<img src="https://avatars.githubusercontent.com/u/85576085?v=4" height="50" width="50">| Ernesto Bessone | ejubessone@hotmail.com | [@eju97](https://github.com/Eju97)
 <img src="https://avatars.githubusercontent.com/u/96196361?v=4" height="50" width="50">| Julian Flores | julianfloresdev@gmail.com | [@JulianFloresDev](https://github.com/JulianFloresDev)
-<img src="https://avatars.githubusercontent.com/u/106119258?v=4" height="50" width="50">| Martin Zancocchia | tinchozan@gmail.com | [@martinzancocchia](https://github.com/martinzancocchia)
-<img src="https://avatars.githubusercontent.com/u/111015140?v=4" height="50" width="50">| Leandro Di Simone | disimoneleandro@gmail.com | [@disimoneleandro](https://github.com/disimoneleandro)
-<img src="https://avatars.githubusercontent.com/u/46402074?v=4" height="50" width="50">| Fabricio Castillo | fabriciol.castillo@gmail.com | [@eyrent](https://github.com/eyrent)
+<img src="https://avatars.githubusercontent.com/u/85576085?v=4" height="50" width="50">| Ernesto Bessone | ejubessone@hotmail.com | [@eju97](https://github.com/Eju97)
 
 
 <br>
 
 ### License & Copyright
-
-© Brosware Developer
+[© Brosware](https://github.com/brosware)
