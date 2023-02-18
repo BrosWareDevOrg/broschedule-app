@@ -1,4 +1,6 @@
-# Schedulo App.
+# Schedulo
+
+## What is 'Schedulo'?
 
 'Schedulo' is a platform that allows users to book appointments with service providers and enables service providers to manage their schedules and appointments. Users can register and log in to the website to search for service providers based on their location, service type, availability, and ratings. They can book appointments with service providers and cancel them if necessary. Service providers can manage their schedules, view and confirm new appointments, and mark completed appointments. Users can also provide reviews and ratings for service providers to help other users in choosing the right provider. This web app can be a valuable tool for users and service providers to streamline the appointment booking process and manage schedules efficiently.
 
