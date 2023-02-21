@@ -1,4 +1,4 @@
-import Mockup from "./Components/mockup";
+import Mockup from "./components/Mockup";
 
 function App() {
   return (
