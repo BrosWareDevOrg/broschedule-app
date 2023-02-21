@@ -1,14 +1,14 @@
 const Mockup = () => {
   return (
     <div className="flex flex-col gap-5 w-screen h-screen bg-gray-900">
-      <headear className="flex p-2 justify-between">
+      <header className="flex p-2 justify-between">
         <h1 className="font-bold text-2xl text-violet-700">Schedulo</h1>
         <div className="group flex flex-col justify-between p-1 w-12 h-10 transition-all hover:cursor-pointer">
           <span className="flex w-full h-[4px] rounded-sm bg-violet-900 origin-top-left group-hover:rotate-45 transition-all"></span>
           <span className="flex w-full h-[4px] rounded-sm bg-violet-900 group-hover:hidden transition-all"></span>
           <span className="flex w-full h-[4px] rounded-sm bg-violet-900 origin-top-left group-hover:-rotate-45 transition-all"></span>
         </div>
-      </headear>
+      </header>
       <div className="flex justify-between basis-full w-full">
         <section
           id="navigate"
@@ -17,22 +17,22 @@ const Mockup = () => {
           <nav className="flex flex-col basis-full">
             <ul className="flex flex-col justify-between basis-full px-4 py-2">
               <li className="flex h-[50px] items-center justify-center cursor-pointer">
-                <span class="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
+                <span className="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
                   home
                 </span>
               </li>
               <li className="flex h-[50px] items-center justify-center cursor-pointer">
-                <span class="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
+                <span className="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
                   auto_stories
                 </span>
               </li>
               <li className="flex h-[50px] items-center justify-center cursor-pointer">
-                <span class="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
+                <span className="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
                   book
                 </span>
               </li>
               <li className="flex h-[50px] items-center justify-center cursor-pointer">
-                <span class="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
+                <span className="material-symbols-outlined text-5xl hover:text-blue-600 transition-all">
                   person
                 </span>
               </li>
@@ -215,8 +215,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
@@ -227,8 +227,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
@@ -239,8 +239,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
@@ -251,7 +251,7 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
+                  disabled
                   checked={false}
                   className="peer hidden"
                 />
@@ -263,7 +263,7 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
+                  disabled
                   checked={false}
                   className="peer hidden"
                 />
@@ -275,8 +275,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
@@ -287,8 +287,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
@@ -299,8 +299,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">
@@ -311,7 +311,7 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
+                  disabled
                   checked={false}
                   className="peer hidden"
                 />
@@ -323,8 +323,8 @@ const Mockup = () => {
               <div className="bg-indigo-400 flex flex-col justify-between w-full h-[75px] rounded-lg cursor-pointer hover:bg-indigo-500">
                 <input
                   type="checkbox"
-                  disable
-                  checked={true}
+                  disabled
+                  checked
                   className="peer hidden"
                 />
                 <div className="flex flex-col justify-between w-full h-full p-4 rounded-lg peer-checked:bg-red-400">

@@ -1,3 +1,5 @@
 import { combineReducers } from 'redux';
 
-export const reducer = combineReducers({});
+const reducer = combineReducers({});
+
+export default reducer;
