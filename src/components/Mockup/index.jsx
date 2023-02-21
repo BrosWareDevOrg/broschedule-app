@@ -4,7 +4,7 @@ const Mockup = () => {
       <headear className="flex p-2 justify-between">
         <h1 className="font-bold text-2xl text-violet-700">Schedulo</h1>
         <div className="group flex flex-col justify-between p-1 w-12 h-10 transition-all hover:cursor-pointer">
-          <span className="flex w-full h-[4px] rounded-sm bg-violet-900 origin-top-left group-hover:rotate-45 transition-all"></span>
+          <span className="flex w-full h-[4px] rounded-sm bg-violet-700 origin-top-left group-hover:rotate-45 transition-all"></span>
           <span className="flex w-full h-[4px] rounded-sm bg-violet-800 group-hover:hidden transition-all"></span>
           <span className="flex w-full h-[4px] rounded-sm bg-violet-900 origin-top-left group-hover:-rotate-45 transition-all"></span>
         </div>
