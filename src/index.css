@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -23,6 +24,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
