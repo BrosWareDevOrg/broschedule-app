@@ -1,9 +1,7 @@
-import Mockup from "./components/Mockup";
+import CounterForTest from './components/CounterForTest';
 
 function App() {
-  return (
-    <Mockup />
-  );
+  return <CounterForTest />;
 }
 
 export default App;
