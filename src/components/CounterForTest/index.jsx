@@ -9,7 +9,7 @@ const CounterForTest = () => {
   const [numberOfDecrement, setNumberOfDecrement] = useState(1);
   return (
     <div className="w-screen h-screen bg-black flex flex-wrap justify-center items-center gap-3">
-      <div className="flex gap-2 border-2 border-indigo-400 px-4 py-2 rounded-2xl">
+      <div className="flex gap-2 border-2 border-primary-700 px-4 py-2 rounded-2xl">
         <input
           type="range"
           id="incrementRange"
@@ -20,12 +20,12 @@ const CounterForTest = () => {
         />
         <button
           onClick={() => dispatch(incrementBy(numberOfIncrement))}
-          className="bg-slate-500 px-4 py-2 rounded font-bold text-xl"
+          className="bg-primary-200 hover:bg-primary-700 px-4 py-2 rounded font-bold text-xl"
         >
           Increment {numberOfIncrement}
         </button>
       </div>
-      <div className="flex gap-2 border-2 border-indigo-400 px-4 py-2 rounded-2xl">
+      <div className="flex gap-2 border-2 border-primary-700 px-4 py-2 rounded-2xl">
         <input
           type="range"
           id="decrementRange"
@@ -36,12 +36,12 @@ const CounterForTest = () => {
         />
         <button
           onClick={() => dispatch(decrementBy(numberOfDecrement))}
-          className="bg-slate-500 px-4 py-2 rounded font-bold text-xl"
+          className="bg-primary-200 hover:bg-primary-700 px-4 py-2 rounded font-bold text-xl"
         >
           Decrement {numberOfDecrement}
         </button>
       </div>
-      <p className="px-4 py-2 bg-red-400 border-2 border-red-500 rounded-xl font-extrabold text-xl text-slate-600">
+      <p className="px-4 py-2 bg-tomato-200 border-2 border-tomato-700 rounded-xl font-extrabold text-xl text-slate-600">
         {counter}
       </p>
     </div>
