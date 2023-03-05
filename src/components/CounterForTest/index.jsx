@@ -21,7 +21,7 @@ const CounterForTest = () => {
         />
         <button
           onClick={() => dispatch(incrementBy(numberOfIncrement))}
-          className="bg-slate-500 px-4 py-2 rounded font-bold text-xl"
+          className="bg-primary-200 hover:bg-primary-700 px-4 py-2 rounded font-bold text-xl"
         >
           Increment {numberOfIncrement}
         </button>
@@ -38,12 +38,12 @@ const CounterForTest = () => {
         />
         <button
           onClick={() => dispatch(decrementBy(numberOfDecrement))}
-          className="bg-slate-500 px-4 py-2 rounded font-bold text-xl"
+          className="bg-primary-200 hover:bg-primary-700 px-4 py-2 rounded font-bold text-xl"
         >
           Decrement {numberOfDecrement}
         </button>
       </div>
-      <p className="px-4 py-2 bg-red-400 border-2 border-red-500 rounded-xl font-extrabold text-xl text-slate-600">
+      <p className="px-4 py-2 bg-tomato-200 border-2 border-tomato-700 rounded-xl font-extrabold text-xl text-slate-600">
         {counter}
       </p>
     </div>
