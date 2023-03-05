@@ -9,7 +9,8 @@ const CounterForTest = () => {
   const [numberOfDecrement, setNumberOfDecrement] = useState(1);
   return (
     <div className="w-screen h-screen bg-black flex flex-wrap justify-center items-center gap-3">
-      <div className="flex gap-2 border-2 border-primary-700 px-4 py-2 rounded-2xl">
+      <div className="flex gap-2 border-2 border-indigo-400 px-4 py-2 rounded-2xl">
+        <label htmlFor="incrementRange">primero</label>
         <input
           type="range"
           id="incrementRange"
@@ -25,7 +26,8 @@ const CounterForTest = () => {
           Increment {numberOfIncrement}
         </button>
       </div>
-      <div className="flex gap-2 border-2 border-primary-700 px-4 py-2 rounded-2xl">
+      <div className="flex gap-2 border-2 border-indigo-400 px-4 py-2 rounded-2xl">
+        <label htmlFor="decrementRange">segundo</label>
         <input
           type="range"
           id="decrementRange"
