@@ -1,27 +1,12 @@
 import { render, fireEvent } from '@testing-library/react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { incrementBy, decrementBy } from '../../redux/global/actions';
+import { mockDispatch } from '../../utils/tests/setupTests';
 import CounterForTest from './index';
 
-jest.mock('react-redux', () => ({
-  useDispatch: jest.fn(),
-  useSelector: jest.fn(),
-}));
-
 describe('CounterForTest', () => {
-  const mockDispatch = jest.fn();
-
-  beforeEach(() => {
-    useDispatch.mockReturnValue(mockDispatch);
-    useSelector.mockImplementation((selector) => selector({ global: { counter: 0 } }));
-  });
-
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('renders correctly', () => {
-    const { container } = render(<CounterForTest />);
+    const container = render(<CounterForTest />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -37,6 +22,24 @@ describe('CounterForTest', () => {
     const decrementButton = getByText(/decrement/i);
     fireEvent.click(decrementButton);
     expect(mockDispatch).toHaveBeenCalledWith(decrementBy(1));
+  });
+
+  it('increments the counter by the number specified in the increment range input', () => {
+    const { getByLabelText, getByText } = render(<CounterForTest />);
+    const incrementRangeInput = getByLabelText('primero');
+    const incrementButton = getByText(/increment/i);
+    fireEvent.change(incrementRangeInput, { target: { value: '5' } });
+    fireEvent.click(incrementButton);
+    expect(mockDispatch).toHaveBeenCalledWith(incrementBy(5));
+  });
+
+  it('decrements the counter by the number specified in the decrement range input', () => {
+    const { getByLabelText, getByText } = render(<CounterForTest />);
+    const decrementRangeInput = getByLabelText('segundo');
+    const decrementButton = getByText(/decrement/i);
+    fireEvent.change(decrementRangeInput, { target: { value: '5' } });
+    fireEvent.click(decrementButton);
+    expect(mockDispatch).toHaveBeenCalledWith(decrementBy(5));
   });
 
   it('displays the current counter value', () => {
