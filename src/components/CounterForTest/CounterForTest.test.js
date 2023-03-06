@@ -1,4 +1,5 @@
-import { render, fireEvent } from '@testing-library/react';
+//For common uses with react-router-dom we must to build a custom 'render' hook, and use it insthead oficial 'render' from @testing-library/react.
+import { render, fireEvent } from '../../utils/tests/renderWithRouter';
 import { useSelector } from 'react-redux';
 import { incrementBy, decrementBy } from '../../redux/global/actions';
 import { mockDispatch } from '../../utils/tests/setupTests';
@@ -43,7 +44,9 @@ describe('CounterForTest', () => {
   });
 
   it('displays the current counter value', () => {
-    useSelector.mockImplementation((selector) => selector({ global: { counter: 10 } }));
+    useSelector.mockImplementation((selector) =>
+      selector({ global: { counter: 10 } })
+    );
     const { getByText } = render(<CounterForTest />);
     const counterValue = getByText('10');
     expect(counterValue).toBeInTheDocument();
