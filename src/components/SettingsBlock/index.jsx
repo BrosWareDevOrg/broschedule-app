@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import Icon from '../Icon';
+import BooleanSelector from '../BooleanSelector';
 
 const icons = [
   'alert',
@@ -15,19 +17,48 @@ const icons = [
   'user',
 ];
 
-const SettingsBlock = ({ children = '', icon = 'user' }) => {
+const SettingsBlock = ({
+  children = '',
+  icon = 'user',
+  isBoolean = false,
+  isActive = false,
+  onClick = () => {},
+}) => {
   return (
-    <div className="flex items-center justify-between gap-[25px] p-3">
-      <img src={`/assets/icons/${icon}.svg`} />
-      {children}
+    <div
+      onClick={onClick}
+      className={`group w-full flex items-center justify-between gap-[25px] p-3 bg-white ${
+        !isBoolean && 'hover:bg-primary-200 cursor-pointer'
+      } text-gray-500 text-xl font-semibold rounded-lg`}
+    >
+      <span className="p-2 rounded-full group-hover:bg-white">
+        <Icon icon={icon} containerType="" />
+      </span>
+      <div className="flex flex-col">{children}</div>
+      <div className="flex gap-4 items-center">
+        {isBoolean ? (
+          <>
+            <p className="text-gray-bg-700 text-lg">
+              {isActive ? 'On' : 'Off'}
+            </p>
+            <BooleanSelector isActive={isActive} />
+          </>
+        ) : (
+          <img
+            className={`flex p-2 rounded-lg bg-gray-bg-300 group-hover:bg-transparent`}
+            src="assets/icons/chevron-right-light.svg"
+          />
+        )}
+      </div>
     </div>
   );
 };
 
-
 SettingsBlock.propTypes = {
-  icon: PropTypes.oneOf(icons)
+  onClick: PropTypes.func,
+  icon: PropTypes.oneOf(icons),
+  isBoolean: PropTypes.bool,
+  isActive: PropTypes.bool,
 };
-
 
 export default SettingsBlock;
