@@ -13,8 +13,12 @@ module.exports = {
         500: '#8359E380',
         200: '#8359E34d',
       },
-      green: '#0FD375',
-      orange: '#F29D38',
+      green: {
+        700: '#0FD375',
+      },
+      orange: {
+        700: '#F29D38',
+      },
       gray: {
         300: '#E6E6E6',
         500: '#444444',
@@ -29,6 +33,8 @@ module.exports = {
         700: '#ED6363',
         200: '#ED636333',
       },
+      white: '#FFFFFE',
+      black: '#16161A',
     },
     extend: {
       dropShadow: {
