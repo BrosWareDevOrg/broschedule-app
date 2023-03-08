@@ -16,6 +16,7 @@ module.exports = {
       green: '#0FD375',
       orange: '#F29D38',
       gray: {
+        300: '#E6E6E6',
         500: '#444444',
         700: '#969696',
       },
@@ -29,7 +30,12 @@ module.exports = {
         200: '#ED636333',
       },
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        br: '1px 1px 4px rgba(0, 0, 0, 0.25)',
+        l: '-1px 0px 3px rgba(0, 0, 0, 0.25)',
+      }
+    },
   },
   plugins: [],
 };
