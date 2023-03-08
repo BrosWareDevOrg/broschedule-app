@@ -9,6 +9,7 @@ describe('Icon', () => {
     expect(icon).toBeInTheDocument();
     expect(iconContainer).toBeInTheDocument();
   });
+
   it('Icon renders correctly with the right src attribute', () => {
     render(<Icon icon="alert" />);
     const icon = screen.getByRole('img');
@@ -39,5 +40,14 @@ describe('Icon', () => {
     const squareStyles = 'flex justify-center items-center bg-white w-[80px] h-[80px] rounded-lg border border-black';
     expect(iconContainer).toHaveClass(squareStyles);
     expect(screen.getByRole('img')).toHaveClass('w-12');
+  });
+
+  it('renders correctly with an empty container type', () => {
+    render(<Icon icon="alert" containerType="" />);
+    const iconContainer = screen.getByRole('img').parentElement;
+    expect(iconContainer).toBeInTheDocument();
+    const defaultStyle = 'flex justify-center items-center';
+    expect(iconContainer).toHaveClass(defaultStyle);
+    expect(screen.getByRole('img')).toHaveClass('w-8');
   });
 });
