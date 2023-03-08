@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const BooleanSelector = ({ isActive = false }) => {
   return (
     <div
@@ -15,5 +16,9 @@ const BooleanSelector = ({ isActive = false }) => {
     </div>
   );
 };
+
+BooleanSelector.propTypes = {
+  isActive: PropTypes.bool
+}
 
 export default BooleanSelector;
