@@ -35,7 +35,7 @@ describe('BooleanSelector test suit', () => {
     const container = screen.getByTestId('container');
     //Here we expect to render the Boolean Selector 'div' in green colors class
     expect(container.firstChild.firstChild).toHaveClass(
-      'w-4 h-4 flex rounded-[50px] bg-green drop-shadow-l translate-x-full transition-all'
+      'w-4 h-4 flex rounded-[50px] bg-green-700 drop-shadow-l translate-x-full transition-all'
     );
   });
 });

@@ -3,13 +3,13 @@ const BooleanSelector = ({ isActive = false }) => {
   return (
     <div
       className={`group flex p-[2px] w-10 border-[1px] rounded-[50px] bg-gray-300 ${
-        isActive ? 'border-green' : 'border-primary-700'
+        isActive ? 'border-green-700' : 'border-primary-700'
       } transition-all cursor-pointer`}
     >
       <span
         className={`w-4 h-4 flex rounded-[50px] ${
           isActive
-            ? 'bg-green drop-shadow-l translate-x-full'
+            ? 'bg-green-700 drop-shadow-l translate-x-full'
             : 'bg-primary-700 drop-shadow-br'
         } transition-all`}
       ></span>
