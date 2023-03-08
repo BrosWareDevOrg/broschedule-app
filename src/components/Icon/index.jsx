@@ -31,7 +31,7 @@ const Icon = ({ icon, containerType }) => {
 
 Icon.propTypes = {
   icon: PropTypes.oneOf(icons).isRequired,
-  containerType: PropTypes.string,
+  containerType: PropTypes.oneOf(['circle', 'bigCircle', 'square']),
 };
 
 export default Icon;
