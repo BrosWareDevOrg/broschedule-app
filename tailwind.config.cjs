@@ -32,6 +32,8 @@ module.exports = {
         700: '#ED6363',
         200: '#ED636333',
       },
+      white: '#FFFFFE',
+      black: '#16161A',
     },
     extend: {},
   },
