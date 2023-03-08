@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
-import BooleanSelector from '../BooleanSelector';
+import ToggleSelector from '../ToggleSelector';
 
 const icons = [
   'alert',
@@ -41,7 +41,7 @@ const SettingsBlock = ({
             <p className="text-gray-bg-700 text-lg">
               {isActive ? 'On' : 'Off'}
             </p>
-            <BooleanSelector isActive={isActive} />
+            <ToggleSelector isActive={isActive} />
           </>
         ) : (
           <img
