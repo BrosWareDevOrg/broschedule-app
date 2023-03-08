@@ -17,6 +17,10 @@ describe('Button Tests', () => {
     expect(
       screen.queryByRole('button', { name: /press me/i })
     ).not.toBeInTheDocument();
+
+    expect(screen.getByRole('button', { name: /button/i })).toHaveTextContent(
+      'Button'
+    );
   });
   it('Should have background color orange, when pass "bgColor" property as orange value', () => {
     render(<Button bgColor="orange">Click here</Button>);
