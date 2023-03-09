@@ -1,5 +1,11 @@
 import SettingsBlock from '.';
-import { render, screen } from '../../utils/tests/renderWithRouter';
+import {
+  fireEvent,
+  render,
+  screen,
+} from '../../utils/tests/renderWithRouter';
+
+const onClick = jest.fn();
 
 const rendered = (
   isActive = false,
@@ -8,7 +14,12 @@ const rendered = (
   children = 'Settings'
 ) =>
   render(
-    <SettingsBlock isActive={isActive} isBoolean={isBoolean} icon={icon}>
+    <SettingsBlock
+      onClick={onClick}
+      isActive={isActive}
+      isBoolean={isBoolean}
+      icon={icon}
+    >
       {children}
     </SettingsBlock>
   );
@@ -45,7 +56,7 @@ describe('SettingsBlock Component test suits', () => {
       'flex p-2 rounded-lg bg-gray-bg-300 group-hover:bg-transparent'
     );
   });
-  it('Should be render with ToggleSelector inside if "isBoolean" prop is "true"', () => {
+  it('Should be render with Off ToggleSelector inside if "isBoolean" prop is "true" and "isActive" is false', () => {
     rendered(false, true, 'dark', 'Dark Mode');
     expect(
       screen.getByText('Dark Mode').nextSibling.firstChild.textContent
@@ -61,5 +72,30 @@ describe('SettingsBlock Component test suits', () => {
     ).toHaveClass(
       'w-4 h-4 flex rounded-[50px] hover:translate-x-1 bg-primary-700 drop-shadow-br transition-all'
     );
+  });
+  it('Should render a green ToggleSelector when "isBoolean" is true and "isActive" is true', () => {
+    rendered(true, true, 'dark', 'Dark Mode');
+    expect(
+      screen.getByText('Dark Mode').nextSibling.firstChild.textContent
+    ).toContain('On');
+    expect(screen.getByText('Dark Mode').nextSibling.childNodes[1]).toHaveClass(
+      'group flex p-[2px] w-10 border-[1px] rounded-[50px] bg-gray-300 border-green-700 transition-all cursor-pointer'
+    );
+    expect(
+      screen.getByText('Dark Mode').nextSibling.childNodes[1].firstChild
+    ).toHaveClass(
+      'w-4 h-4 flex rounded-[50px] hover:translate-x-1 bg-green-700 drop-shadow-l translate-x-full transition-all'
+    );
+    expect(
+      screen.getByText('Dark Mode').parentElement.firstChild.childNodes[0]
+        .firstChild
+    ).toHaveAttribute('src', '/assets/icons/dark.svg');
+  });
+  it('Should fire event when is clicked', () => {
+    rendered();
+    const settingsBlock = screen.getByText('Settings').parentElement;
+    expect(settingsBlock).toBeInTheDocument();
+    fireEvent.click(settingsBlock);
+    expect(onClick).toHaveBeenCalled();
   });
 });
