@@ -7,7 +7,7 @@ const BooleanSelector = ({ isActive = false }) => {
       } transition-all cursor-pointer`}
     >
       <span
-        className={`w-4 h-4 flex rounded-[50px] ${
+        className={`w-4 h-4 flex rounded-[50px] hover:translate-x-1 ${
           isActive
             ? 'bg-green-700 drop-shadow-l translate-x-full'
             : 'bg-primary-700 drop-shadow-br'
