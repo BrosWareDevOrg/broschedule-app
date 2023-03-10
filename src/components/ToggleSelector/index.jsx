@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-const BooleanSelector = ({ isActive = false }) => {
+const ToggleSelector = ({ isActive = false }) => {
   return (
     <div
       className={`group flex p-[2px] w-10 border-[1px] rounded-[50px] bg-gray-300 ${
@@ -17,8 +17,8 @@ const BooleanSelector = ({ isActive = false }) => {
   );
 };
 
-BooleanSelector.propTypes = {
+ToggleSelector.propTypes = {
   isActive: PropTypes.bool
 }
 
-export default BooleanSelector;
+export default ToggleSelector;
