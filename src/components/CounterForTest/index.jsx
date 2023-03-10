@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { decrementBy, incrementBy } from '../../redux/global/actions';
-
 const CounterForTest = () => {
   const dispatch = useDispatch();
   const { counter } = useSelector((store) => store.global);
@@ -50,7 +49,7 @@ const CounterForTest = () => {
         </p>
         <Link
           to={'/private'}
-          className="px-4 py-2 rounded-md border-2 border-orange"
+          className="px-4 py-2 rounded-md border-2 border-orange-700"
         >
           Navigate to a Private Route
         </Link>
