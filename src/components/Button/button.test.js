@@ -23,7 +23,7 @@ describe('Button Tests', () => {
     );
   });
   it('Should have background color orange, when pass "bgColor" property as orange value', () => {
-    render(<Button bgColor="orange">Click here</Button>);
+    render(<Button bgColor="orange" onClick={onClick}>Click here</Button>);
     //Test if backgound color is the called as bgColor prop and children prop show correctly
     expect(screen.getByRole('button', { name: /click here/i })).toHaveClass(
       'bg-orange-700'
