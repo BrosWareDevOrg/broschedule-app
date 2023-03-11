@@ -1,7 +1,7 @@
 import { SET_MODAL_STATE } from './constants';
 
 const INITIAL_STATE = {
-  isModalActive: true,
+  isModalActive: false,
 };
 
 const globalReducer = (state = INITIAL_STATE, action) => {
