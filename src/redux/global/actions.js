@@ -1,15 +1,8 @@
-import { DECREMENT, INCREMENT } from './constants';
+import { SET_MODAL_STATE } from './constants';
 
-export const incrementBy = (payload) => {
+export const setModalState = (payload) => {
   return {
-    type: INCREMENT,
-    payload,
-  };
-};
-
-export const decrementBy = (payload) => {
-  return {
-    type: DECREMENT,
-    payload,
-  };
-};
+    type: SET_MODAL_STATE,
+    payload
+  }
+}

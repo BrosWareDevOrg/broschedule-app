@@ -1,20 +1,15 @@
-import { INCREMENT, DECREMENT } from './constants';
+import { SET_MODAL_STATE } from './constants';
 
 const INITIAL_STATE = {
-  counter: 1,
+  isModalActive: true,
 };
 
 const globalReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case INCREMENT:
+    case SET_MODAL_STATE:
       return {
         ...state,
-        counter: state.counter + action.payload,
-      };
-    case DECREMENT:
-      return {
-        ...state,
-        counter: state.counter - action.payload,
+        isModalActive: action.payload,
       };
     default:
       return state;
