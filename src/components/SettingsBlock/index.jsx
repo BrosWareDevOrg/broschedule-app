@@ -27,7 +27,7 @@ const SettingsBlock = ({
   return (
     <div
       onClick={onClick}
-      className={`group w-full flex items-center justify-between gap-[25px] p-3 bg-white ${
+      className={`group w-full flex items-center justify-between gap-[25px] p-3 ${
         !isBoolean && 'hover:bg-primary-200 cursor-pointer'
       } text-gray-500 text-xl font-semibold rounded-lg`}
     >

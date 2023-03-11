@@ -4,7 +4,7 @@ import { fireEvent, render, screen } from '../../utils/tests/renderWithRouter';
 const onClick = jest.fn();
 
 const containerStyles =
-  'group w-full flex items-center justify-between gap-[25px] p-3 bg-white hover:bg-primary-200 cursor-pointer text-gray-500 text-xl font-semibold rounded-lg';
+  'group w-full flex items-center justify-between gap-[25px] p-3 hover:bg-primary-200 cursor-pointer text-gray-500 text-xl font-semibold rounded-lg';
 const chevronStyles =
   'flex p-2 rounded-lg bg-gray-bg-300 group-hover:bg-transparent';
 const toggleDisableContainerStyles =
