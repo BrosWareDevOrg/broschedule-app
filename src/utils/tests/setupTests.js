@@ -8,7 +8,7 @@ jest.mock('react-redux', () => ({
 
 beforeEach(() => {
   useDispatch.mockReturnValue(mockDispatch);
-  useSelector.mockImplementation((selector) => selector({ global: { counter: 0 } }));
+  useSelector.mockImplementation((selector) => selector({ global: { isModalActive: false } }));
 });
 
 afterEach(() => {
