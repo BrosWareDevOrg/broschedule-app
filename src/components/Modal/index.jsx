@@ -71,7 +71,12 @@ const Modal = ({
 };
 
 Modal.propTypes = {
-  sections: PropTypes.array,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      content: PropTypes.node.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Modal;
