@@ -86,8 +86,9 @@ const Modal = ({
           >
             {sections?.map((section, index) => {
               return (
-                <div key={index}>
+                <>
                   <div
+                    key={index}
                     aria-label={section.title}
                     className={styles.modalTitleDiv}
                   >
@@ -101,7 +102,7 @@ const Modal = ({
                     )}
                   </div>
                   <div className="basis-full">{section.content}</div>
-                </div>
+                </>
               );
             })}
           </div>
