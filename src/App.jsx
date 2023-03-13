@@ -7,22 +7,24 @@ const PrivateRoute = lazy(() => import('./routes/PrivateRoute'));
 function App() {
   return (
     <Suspense fallback={<div>Loading . . .</div>}>
-      <Router basename='/'>
+      <Router basename="/">
         <Routes path="/">
           <Route path="/" element={<CounterForTest />} />
           <Route element={<PrivateRoute />}>
             <Route
               path="/private"
               element={
-                <div className='flex flex-col gap-4 justify-center items-center'>
-                  <p>This is a Private Route</p>
-                  <Link
-                    to={'/'}
-                    className="px-4 py-2 rounded-md border-2 border-orange"
-                  >
-                    Navigate to Home
-                  </Link>
-                </div>
+                <>
+                  <div className="w-screen h-screen grid place-items-center">
+                    <p>This is a Private Route</p>
+                    <Link
+                      to={'/'}
+                      className="px-4 py-2 rounded-md border-2 border-orange-700"
+                    >
+                      Navigate to Home
+                    </Link>
+                  </div>
+                </>
               }
             />
           </Route>
