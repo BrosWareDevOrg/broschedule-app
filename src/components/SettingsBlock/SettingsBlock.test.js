@@ -66,8 +66,8 @@ describe('SettingsBlock Component test suits', () => {
   it('Should be render with Off ToggleSelector inside if "isBoolean" prop is "true" and "isActive" is false', () => {
     rendered(false, true, 'dark', 'Dark Mode');
     expect(
-      screen.getByText('Dark Mode').nextSibling.firstChild.textContent
-    ).toContain('Off');
+      screen.getByText('Dark Mode').nextSibling.firstChild
+    ).toHaveTextContent(/Off/);
     expect(screen.getByText('Dark Mode').nextSibling.childNodes[0]).toHaveClass(
       'text-gray-bg-700 text-lg'
     );
@@ -81,8 +81,8 @@ describe('SettingsBlock Component test suits', () => {
   it('Should render a green ToggleSelector when "isBoolean" is true and "isActive" is true', () => {
     rendered(true, true, 'dark', 'Dark Mode');
     expect(
-      screen.getByText('Dark Mode').nextSibling.firstChild.textContent
-    ).toContain('On');
+      screen.getByText('Dark Mode').nextSibling.firstChild
+    ).toHaveTextContent(/On/);
     expect(screen.getByText('Dark Mode').nextSibling.childNodes[1]).toHaveClass(
       toggleActiveContainerStyles
     );
