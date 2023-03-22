@@ -7,7 +7,7 @@ const NavbarIcon = ({ icon = 'bell' }) => {
   const svgProps = SVGExporter(icon);
   return (
     <div
-      className="flex items-center justify-center w-6 h-6 md:w-16 md:h-16 md:p-4 md:rounded-md md:hover:bg-gray-bg-500 md:cursor-pointer"
+      className="flex items-center justify-center w-8 h-8 p-1 md:w-16 md:h-16 md:p-4 md:rounded-md md:hover:bg-gray-bg-500 md:cursor-pointer transition-all"
       onMouseOver={() => setHoveringState(true)}
       onMouseLeave={() => setHoveringState(false)}
     >
