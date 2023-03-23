@@ -9,7 +9,7 @@ const svgs = [
     ],
   },
   {
-    name: 'user',
+    name: 'perfil',
     width: '37',
     height: '38',
     viewBox: '0 0 37 38',
@@ -47,7 +47,7 @@ const svgs = [
     ],
   },
   {
-    name: 'bell',
+    name: 'notifications',
     width: '37',
     height: '38',
     viewBox: '0 0 37 38',

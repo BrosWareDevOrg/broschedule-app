@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import SVGExporter from '../../utils/functions/SVGExport';
 
-const NavbarIcon = ({ icon = 'bell' }) => {
+const NavbarIcon = ({ icon = 'notifications' }) => {
+  const location = useLocation();
+  const currentLocation = location.pathname;
+  console.log(currentLocation);
   const [isHovering, setHoveringState] = useState(false);
   const svgProps = SVGExporter(icon);
   return (
@@ -16,7 +20,13 @@ const NavbarIcon = ({ icon = 'bell' }) => {
         height={svgProps.height}
         viewBox={svgProps.viewBox}
         xmlns="http://www.w3.org/2000/svg"
-        fill={isHovering ? '#8359E3' : '#C0C0C080'}
+        fill={
+          isHovering
+            ? '#8359E3'
+            : currentLocation.includes(icon)
+            ? 'white'
+            : '#C0C0C080'
+        }
       >
         {svgProps.paths.map((path, index) => {
           return <path d={path} key={index} fillOpacity="0.6" />;
