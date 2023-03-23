@@ -7,11 +7,11 @@ const Navbar = lazy(() => import('./components/Navbar'));
 
 function App() {
   return (
-    <div className="relative flex flex-col-reverse md:flex-row overflow-hidden w-screen h-screen">
-      <Navbar />
-      <Suspense fallback={<div>Loading . . .</div>}>
-        <main className="grid items-center w-screen h-screen">
-          <Router basename="/">
+    <Suspense fallback={<div>Loading . . .</div>}>
+      <Router basename="/">
+        <div className="relative flex flex-col-reverse md:flex-row overflow-hidden w-screen h-screen">
+          <Navbar />
+          <main className="grid items-center w-screen h-screen">
             <Routes path="/">
               <Route path="/" element={<CounterForTest />} />
               <Route element={<PrivateRoute />}>
@@ -33,10 +33,10 @@ function App() {
                 />
               </Route>
             </Routes>
-          </Router>
-        </main>
-      </Suspense>
-    </div>
+          </main>
+        </div>
+      </Router>
+    </Suspense>
   );
 }
 

@@ -6,7 +6,6 @@ import SVGExporter from '../../utils/functions/SVGExport';
 const NavbarIcon = ({ icon = 'notifications' }) => {
   const location = useLocation();
   const currentLocation = location.pathname;
-  console.log(currentLocation);
   const [isHovering, setHoveringState] = useState(false);
   const svgProps = SVGExporter(icon);
   return (
@@ -42,8 +41,8 @@ NavbarIcon.propTypes = {
     'calendar',
     'settings',
     'logout',
-    'bell',
-    'user',
+    'notifications',
+    'perfil',
   ]),
   viewBox: PropTypes.string,
 };
