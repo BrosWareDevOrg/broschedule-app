@@ -38,9 +38,9 @@ describe('Icon', () => {
     render(<Icon icon="alert" containerType="square" />);
     const iconContainer = screen.getByRole('img').parentElement;
     expect(iconContainer).toBeInTheDocument();
-    const squareStyles = 'flex justify-center items-center bg-white w-[80px] h-[80px] rounded-lg border border-black';
+    const squareStyles = 'flex justify-center items-center bg-white w-[118px] h-[118px] rounded-lg border border-black';
     expect(iconContainer).toHaveClass(squareStyles);
-    expect(screen.getByRole('img')).toHaveClass('w-12');
+    expect(screen.getByRole('img')).toHaveClass('w-3/4');
   });
 
   it('renders correctly with an empty container type', () => {
