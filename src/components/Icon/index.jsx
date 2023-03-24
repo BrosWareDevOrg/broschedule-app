@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 
 const icons = [
   'alert',
@@ -23,8 +24,19 @@ const Icon = ({ icon, containerType }) => {
   };
 
   return (
-    <div className={'flex justify-center items-center ' + containerStyles[containerType] || ''}>
-      <img src={`/assets/icons/${icon}.svg`} className={containerType === 'square' ? 'w-12' : 'w-8'} />
+    <div
+      className={
+        'relative flex justify-center items-center ' +
+          containerStyles[containerType] || ''
+      }
+    >
+      <Image
+        alt="icon"
+        src={`/assets/icons/${icon}.svg`}
+        width={50}
+        height={50}
+        className={containerType === 'square' ? 'w-12' : 'w-8'}
+      />
     </div>
   );
 };

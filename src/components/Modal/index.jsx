@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import Image from 'next/image';
 import { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
@@ -23,7 +25,7 @@ const Modal = ({
       //Removing 'Escape' keypress event
       document.removeEventListener('keyup', handleEscKeyEvent);
     };
-  }, []);
+  });
 
   const addClickEventListener = () => {
     modalBackground.current &&
@@ -94,8 +96,11 @@ const Modal = ({
                   >
                     <h3>{section.title || 'Modal Title'}</h3>
                     {index === 0 && (
-                      <img
+                      <Image
+                        alt="close modal"
                         src="/assets/icons/xmark.svg"
+                        width={50}
+                        height={50}
                         className={styles.xmark}
                         onClick={() => dispatch(setModalState(false))}
                       />

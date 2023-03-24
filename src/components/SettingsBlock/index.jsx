@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import ToggleSelector from '../ToggleSelector';
@@ -35,7 +36,7 @@ const SettingsBlock = ({
         <Icon icon={icon} containerType="" />
       </span>
       <div className="flex flex-col">{children}</div>
-      <div className="flex gap-4 items-center">
+      <div className="relative flex gap-4 items-center">
         {isBoolean ? (
           <>
             <p className="text-gray-bg-700 text-lg">
@@ -44,9 +45,12 @@ const SettingsBlock = ({
             <ToggleSelector isActive={isActive} />
           </>
         ) : (
-          <img
-            className={`flex p-2 rounded-lg bg-gray-bg-300 group-hover:bg-transparent`}
+          <Image
             src="assets/icons/chevron-right-light.svg"
+            alt="move on option"
+            width={30}
+            height={30}
+            className={`flex p-2 rounded-lg bg-gray-bg-300 group-hover:bg-transparent`}
           />
         )}
       </div>
