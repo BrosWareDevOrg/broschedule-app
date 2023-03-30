@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-const icons = [
+export const icons = [
   'alert',
   'ball',
   'dark',
@@ -20,7 +20,7 @@ const Icon = ({ icon, containerType }) => {
   const containerStyles = {
     circle: 'bg-white w-14 h-14 rounded-full',
     bigCircle: 'bg-white w-[80px] h-[80px] rounded-full',
-    square: 'bg-white w-[80px] h-[80px] rounded-lg border border-black',
+    square: 'bg-white w-[118px] h-[118px] rounded-lg border border-black',
   };
 
   return (
@@ -35,7 +35,7 @@ const Icon = ({ icon, containerType }) => {
         src={`/assets/icons/${icon}.svg`}
         width={50}
         height={50}
-        className={containerType === 'square' ? 'w-12' : 'w-8'}
+        className={containerType === 'square' ? 'w-3/4' : 'w-8'}
       />
     </div>
   );
