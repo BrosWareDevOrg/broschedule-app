@@ -23,8 +23,6 @@ describe("ServiceCard", () => {
         location={"Rosario"}
       />
     );
-    // const serviceCardIcon = screen.getByAltText('icon')
-    // expect(serviceCardIcon).toBeInTheDocument();
     const serviceCardIconImg = screen.getByAltText("icon");
     expect(serviceCardIconImg).toHaveAttribute(
       "src",
