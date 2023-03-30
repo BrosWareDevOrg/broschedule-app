@@ -23,8 +23,13 @@ describe("ServiceCard", () => {
         location={"Rosario"}
       />
     );
-    const serviceCardIcon = screen.getByAltText('icon')
-    expect(serviceCardIcon).toBeInTheDocument();
+    // const serviceCardIcon = screen.getByAltText('icon')
+    // expect(serviceCardIcon).toBeInTheDocument();
+    const serviceCardIconImg = screen.getByAltText("icon");
+    expect(serviceCardIconImg).toHaveAttribute(
+      "src",
+      "/assets/icons/scissor.svg"
+    );
   });
   it("The Service Card Role is rendered correctly", () => {
     render(
