@@ -16,7 +16,7 @@ const ServiceCard = ({
   return (
     <div
       onClick={onClick}
-      className={`flex border-2 hover:cursor-pointer border-primary-700 rounded-lg bg-[url(assets/images/footballField.svg)] bg-cover bg-no-repeat relative`}
+      className={`flex border-2 hover:cursor-pointer border-primary-700 rounded-lg bg-[url(assets/images/footballField.jpg)] bg-cover bg-no-repeat relative`}
     >
       <span className="w-3/5 h-full block bg-primary-700 left-[105px] absolute opacity-80 rounded-tl-[60px] rounded-tr-[220px] rounded-br-[32px]	rounded-bl-[85px]"></span>
       <div className="flex z-10 gap-10 h-40 p-4 max-w-lg items-center">
