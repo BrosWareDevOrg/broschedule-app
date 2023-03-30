@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Navbar() {
   return (
-    <nav className="md:absolute bottom-0 md:left-0 flex md:flex-col md:gap-12 items-center justify-between py-3 px-10 md:px-3 rounded-t-3xl md:rounded-none md:w-fit h-fit md:h-screen bg-primary-700">
+    <nav className="flex md:flex-col md:gap-12 items-center justify-between py-3 px-10 md:px-3 rounded-t-3xl md:rounded-none md:w-fit h-fit md:h-screen bg-primary-700">
       <Link href="/" className="md:mb-auto">
         <NavbarIcon icon="logo" />
       </Link>
