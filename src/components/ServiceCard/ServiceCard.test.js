@@ -67,7 +67,7 @@ describe("ServiceCard", () => {
     const serviceCardContainer =
       screen.getByText("text").parentElement.parentNode.parentElement;
     const serviceCardContainerStyle =
-      "flex border-2 hover:cursor-pointer border-primary-700 rounded-lg bg-[url(assets/images/footballField.svg)] bg-cover bg-no-repeat relative";
+      "flex border-2 hover:cursor-pointer border-primary-700 rounded-lg bg-[url(assets/images/footballField.jpg)] bg-cover bg-no-repeat relative";
     expect(serviceCardContainer).toHaveClass(serviceCardContainerStyle);
   });
 });
