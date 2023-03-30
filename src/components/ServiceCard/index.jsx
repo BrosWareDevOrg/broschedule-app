@@ -25,7 +25,7 @@ const ServiceCard = ({
           <p className={"font-bold text-2xl capitalize"}>{name}</p>
           <p className={"text-lg capitalize"}>{role}</p>
           <div className={"flex mt-3"}>
-            <img src={`/assets/icons/vector.svg`} className={"mr-2"} />
+            <img src={`/assets/icons/vector.svg`} className={"mr-2"} alt='' />
             <p>{location}</p>
           </div>
           <div className="flex gap-2 font-semibold">
