@@ -72,7 +72,15 @@ describe('ServiceCard', () => {
 
   describe('Testing Next Router', () => {
     it('Should change path correctly', () => {
-      render(<ServiceCard id="user25" />);
+      render(
+        <ServiceCard
+          id="user25"
+          name="Service Provider"
+          icon={'user'}
+          role={'Role'}
+          location={'Location'}
+        />
+      );
       const cardContainer =
         screen.getByText('Service Provider').parentElement.parentNode
           .parentElement;
