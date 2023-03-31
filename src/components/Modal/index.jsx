@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from 'next/image';
-import { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -79,7 +78,7 @@ const Modal = ({
   };
 
   return (
-    <Suspense fallback={<div>Loading. . .</div>}>
+    <>
       {!isModalActive ? null : (
         <div ref={modalBackground} className={styles.container}>
           <div
@@ -113,7 +112,7 @@ const Modal = ({
           </div>
         </div>
       )}
-    </Suspense>
+    </>
   );
 };
 

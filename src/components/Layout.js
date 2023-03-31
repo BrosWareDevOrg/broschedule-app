@@ -37,7 +37,7 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative flex flex-col-reverse md:flex-row w-screen h-screen">
+      <main className="relative flex flex-col-reverse md:flex-row w-screen max-w-[100vw] h-screen">
         <Modal sections={sections} />
         <Navbar />
         {children}
