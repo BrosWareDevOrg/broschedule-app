@@ -66,7 +66,7 @@ const Modal = ({
   const styles = {
     xmark: 'p-1 w-9 h-9 cursor-pointer rounded-md hover:bg-primary-200',
     container:
-      'fixed top-0 left-0 w-screen h-screen grid place-items-center bg-black-500 backdrop-blur-sm cursor-default',
+      'fixed z-[10000] top-0 left-0 w-screen h-screen grid place-items-center bg-black-500 backdrop-blur-sm cursor-default',
     content: {
       display: 'relative flex flex-col p-8 gap-8',
       font: 'font-semibold text-primary-700 text-2xl sm:text-4xl',
