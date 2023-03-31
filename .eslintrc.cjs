@@ -15,6 +15,7 @@ module.exports = {
     // Make sure it's always the last config, so it gets the chance to override other configs.
     'eslint-config-prettier',
     'plugin:testing-library/react',
+    "next/core-web-vitals"
   ],
   settings: {
     react: {

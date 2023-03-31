@@ -1,4 +1,5 @@
-import { Suspense } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +24,7 @@ const Modal = ({
       //Removing 'Escape' keypress event
       document.removeEventListener('keyup', handleEscKeyEvent);
     };
-  }, []);
+  });
 
   const addClickEventListener = () => {
     modalBackground.current &&
@@ -65,7 +66,7 @@ const Modal = ({
   const styles = {
     xmark: 'p-1 w-9 h-9 cursor-pointer rounded-md hover:bg-primary-200',
     container:
-      'fixed top-0 left-0 w-screen h-screen grid place-items-center bg-black-500 backdrop-blur-sm cursor-default',
+      'fixed z-[10000] top-0 left-0 w-screen h-screen grid place-items-center bg-black-500 backdrop-blur-sm cursor-default',
     content: {
       display: 'relative flex flex-col p-8 gap-8',
       font: 'font-semibold text-primary-700 text-2xl sm:text-4xl',
@@ -77,7 +78,7 @@ const Modal = ({
   };
 
   return (
-    <Suspense fallback={<div>Loading. . .</div>}>
+    <>
       {!isModalActive ? null : (
         <div ref={modalBackground} className={styles.container}>
           <div
@@ -94,8 +95,11 @@ const Modal = ({
                   >
                     <h3>{section.title || 'Modal Title'}</h3>
                     {index === 0 && (
-                      <img
+                      <Image
+                        alt="close modal"
                         src="/assets/icons/xmark.svg"
+                        width={50}
+                        height={50}
                         className={styles.xmark}
                         onClick={() => dispatch(setModalState(false))}
                       />
@@ -108,7 +112,7 @@ const Modal = ({
           </div>
         </div>
       )}
-    </Suspense>
+    </>
   );
 };
 
