@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { setModalState } from '@/redux/global/actions';
 import ServiceCard from '@/components/ServiceCard';
+import CalendarComponent from '@/components/Calendar';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -14,6 +15,9 @@ export default function Home() {
           Open Modal
         </p>
       </div>
+      <section>
+        <CalendarComponent />
+      </section>
       <div className="flex flex-col w-full items-center justify-center gap-4 p-10">
         <ServiceCard
           name="Julian Flores"
