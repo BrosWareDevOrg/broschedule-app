@@ -15,9 +15,9 @@ export default function Home() {
           Open Modal
         </p>
       </div>
-      <section>
-        <CalendarComponent />
-      </section>
+
+      <CalendarComponent />
+
       <div className="flex flex-col w-full items-center justify-center gap-4 p-10">
         <ServiceCard
           name="Julian Flores"
