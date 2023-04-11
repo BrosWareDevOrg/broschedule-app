@@ -1,3 +1,4 @@
+'use client';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import SVGExporter from '../../utils/functions/SVGExport';
@@ -16,11 +17,7 @@ const NavbarIcon = ({ icon = 'notifications' }) => {
         height={svgProps.height}
         viewBox={svgProps.viewBox}
         xmlns="http://www.w3.org/2000/svg"
-        fill={
-          isHovering
-            ? '#8359E3'
-            : '#C0C0C080'
-        }
+        fill={isHovering ? '#8359E3' : '#C0C0C080'}
       >
         {svgProps.paths.map((path, index) => {
           return <path d={path} key={index} fillOpacity="0.6" />;

@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
