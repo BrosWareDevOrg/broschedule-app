@@ -1,22 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+'use client';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setModalState } from '../../redux/global/actions';
+import { useEffect, useState, useRef } from 'react';
 
 const Modal = ({
   sections = [{ title: 'Modal Title', content: <p>First Child</p> }],
 }) => {
-  const { isModalActive } = useSelector((store) => store.global);
-  const dispatch = useDispatch();
+  const [isModalActive, setModalState] = useState(false);
+
   const modalBackground = useRef(null);
   const modalContent = useRef(null);
 
   useEffect(() => {
     const handleEscKeyEvent = (e) => {
       //Function to handle 'Escape' keypress event
-      (e.key === 'Escape' || e.key === 'Esc') && dispatch(setModalState(false));
+      (e.key === 'Escape' || e.key === 'Esc') && setModalState(false);
     };
     //Adding keypress event
     document.addEventListener('keyup', handleEscKeyEvent);
@@ -59,7 +58,7 @@ const Modal = ({
       !(x > paddingX && x < paddingX + contentWidth) ||
       !(y > paddingY && y < paddingY + contentHeight)
     ) {
-      dispatch(setModalState(false));
+      setModalState(false);
     }
   };
 
@@ -101,7 +100,7 @@ const Modal = ({
                         width={50}
                         height={50}
                         className={styles.xmark}
-                        onClick={() => dispatch(setModalState(false))}
+                        onClick={() => setModalState(false)}
                       />
                     )}
                   </div>

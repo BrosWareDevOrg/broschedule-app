@@ -56,7 +56,7 @@
 //   });
 // });
 describe('test for pass commit', () => {
-  it('should render tu vieja', () => {
+  it('This component will be redefine after migration', () => {
     expect(2 + 2).toBe(4);
   });
 });
