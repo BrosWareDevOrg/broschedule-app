@@ -11,6 +11,14 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  .scrollbar {
+    scrollbar-width: inherit;
+    -ms-overflow-style: inherit;
+  }
+  .scrollbar::-webkit-scrollbar {
+    display: inherit;
+  }
 }
 
 
