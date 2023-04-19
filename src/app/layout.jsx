@@ -20,7 +20,7 @@ export default function RootLayout({ children, landing }) {
       <head />
       <body>
         <Providers>
-          <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white">
+          <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white flex flex-col-reverse md:flex-row">
             {coockieList.has('userToken') ? (
               <>
                 <Navbar />
