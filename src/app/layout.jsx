@@ -4,6 +4,8 @@ import { cookies } from 'next/headers';
 
 import Providers from './ReduxContext/provider';
 
+import ErrorBoundary from '@/components/errorBoundary';
+
 import Navbar from '@/components/Navbar';
 
 export const metadata = {
@@ -19,18 +21,20 @@ export default function RootLayout({ children, landing }) {
     <html>
       <head />
       <body>
-        <Providers>
-          <>
-            {coockieList.has('userToken') ? (
-              <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white flex flex-col-reverse md:flex-row">
-                <Navbar />
-                {children}
-              </main>
-            ) : (
-              landing
-            )}
-          </>
-        </Providers>
+        <ErrorBoundary>
+          <Providers>
+            <>
+              {coockieList.has('userToken') ? (
+                <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white flex flex-col-reverse md:flex-row">
+                  <Navbar />
+                  {children}
+                </main>
+              ) : (
+                landing
+              )}
+            </>
+          </Providers>
+        </ErrorBoundary>
       </body>
     </html>
   );
