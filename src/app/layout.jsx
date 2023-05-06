@@ -20,16 +20,16 @@ export default function RootLayout({ children, landing }) {
       <head />
       <body>
         <Providers>
-          <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white flex flex-col-reverse md:flex-row">
+          <>
             {coockieList.has('userToken') ? (
-              <>
+              <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white flex flex-col-reverse md:flex-row">
                 <Navbar />
                 {children}
-              </>
+              </main>
             ) : (
               landing
             )}
-          </main>
+          </>
         </Providers>
       </body>
     </html>
