@@ -1,5 +1,7 @@
+'use client';
 import PropTypes from 'prop-types';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Image from 'next/image';
 import vectorImage from '../../../public/assets/icons/vector.svg';
 import Icon from '../Icon';
@@ -13,8 +15,9 @@ const ServiceCard = ({
   icon = 'user',
   availableDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
 }) => {
-  const router = useRouter();
-  const onClick = () => router.push(`/provider/${id}`);
+  //Replace for Link component
+  // const router = useRouter();
+  // const onClick = () => router.push(`/provider/${id}`);
 
   const bgImages = {
     Role: './assets/images/white-circle-bg.jpg',
@@ -26,10 +29,10 @@ const ServiceCard = ({
   };
 
   return (
-    <div
-      onClick={onClick}
-      style={{ background: `url(${bgImages[role]})` }}
+    <Link
       className={`flex w-full border-2 hover:cursor-pointer border-primary-700 rounded-lg bg-cover bg-no-repeat relative`}
+      style={{ background: `url(${bgImages[role]})` }}
+      href={`/provider/${id}`}
     >
       <span className="w-3/5 h-full block bg-primary-700 left-[105px] absolute opacity-80 rounded-tl-[60px] rounded-tr-[220px] rounded-br-[32px]	rounded-bl-[85px]"></span>
       <div className="flex z-10 gap-10 h-40 p-4 max-w-lg items-center">
@@ -48,7 +51,7 @@ const ServiceCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
