@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Icon from '@/components/Icon';
 import ServiceCard from '@/components/ServiceCard';
+import Input from '@/components/Input';
 
 export default function Home() {
   return (
@@ -63,6 +64,9 @@ export default function Home() {
           </Link>
         </li>
       </ul>
+
+      <Input type='select' label='Select an Hour' name='dateOfAppointment' />
+
     </section>
   );
 }
