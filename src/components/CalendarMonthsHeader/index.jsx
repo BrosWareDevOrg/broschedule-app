@@ -26,7 +26,9 @@ const CalendarMonthsHeader = ({
   const handleDragEvent = (e) => {
     const { target, clientX } = e;
     if (isDragging) {
-      target.scrollLeft += clickStartPointX - clientX;
+      const deltaX = clickStartPointX - clientX;
+      target.scrollLeft += deltaX;
+      setStartX(clientX);
     }
   };
 
