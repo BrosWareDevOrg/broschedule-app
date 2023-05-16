@@ -34,6 +34,7 @@ const CalendarMonthsHeader = ({
 
   return (
     <ul
+      aria-label="calendarHeader"
       className={`flex items-center gap-16 md:max-w-sm max-w-full font-semibold overflow-y-auto scrollbar-hide ${
         isDragging ? 'cursor-grabbing' : 'cursor-grab'
       }`}
@@ -56,6 +57,7 @@ const CalendarMonthsHeader = ({
         return (
           <li
             key={index}
+            aria-label={month.toLowerCase()}
             className={`flex flex-col gap-1 items-center cursor-pointer ${
               isSelectedMonth ? 'text-white' : 'text-gray-700'
             } hover:text-gray-300`}

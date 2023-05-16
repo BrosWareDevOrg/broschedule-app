@@ -43,6 +43,7 @@ const CalendarComponent = () => {
                 {rows.map((row, index) => {
                   return (
                     <CalendarDayItem
+                      aria-label={`day ${row.label}`}
                       key={rowIndex.toString().concat(index)}
                       disabled={row.disabled}
                       isSelected={

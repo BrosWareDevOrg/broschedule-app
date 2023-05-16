@@ -7,6 +7,7 @@ const CalendarDayItem = ({
   disabled = false,
   onClick = () => null,
   children,
+  ...props
 }) => {
   const styles = {
     general:
@@ -29,6 +30,7 @@ const CalendarDayItem = ({
       }`}
       onClick={onClick}
       disabled={true}
+      {...props}
     >
       {children || ''}
       {!disabled && haveAppointments && (
