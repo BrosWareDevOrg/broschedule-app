@@ -45,8 +45,14 @@ const CalendarComponent = () => {
                     <CalendarDayItem
                       key={rowIndex.toString().concat(index)}
                       disabled={row.disabled}
-                      isSelected={row.label === daySelected}
-                      isCurrentDay={row.label === now.date()}
+                      isSelected={
+                        row.label === daySelected &&
+                        monthSelected === now.month()
+                      }
+                      isCurrentDay={
+                        row.label === now.date() &&
+                        monthSelected === now.month()
+                      }
                       onClick={() => setDaySelected(row.label)}
                     >
                       {row.label}
