@@ -1,21 +1,21 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { useEffect, useState, useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Modal = ({
   sections = [{ title: 'Modal Title', content: <p>First Child</p> }],
+  children,
 }) => {
-  const [isModalActive, setModalState] = useState(false);
-
+  const router = useRouter();
   const modalBackground = useRef(null);
   const modalContent = useRef(null);
 
   useEffect(() => {
     const handleEscKeyEvent = (e) => {
       //Function to handle 'Escape' keypress event
-      (e.key === 'Escape' || e.key === 'Esc') && setModalState(false);
+      (e.key === 'Escape' || e.key === 'Esc') && router.back();
     };
     //Adding keypress event
     document.addEventListener('keyup', handleEscKeyEvent);
@@ -58,7 +58,7 @@ const Modal = ({
       !(x > paddingX && x < paddingX + contentWidth) ||
       !(y > paddingY && y < paddingY + contentHeight)
     ) {
-      setModalState(false);
+      router.back();
     }
   };
 
@@ -73,44 +73,41 @@ const Modal = ({
         'rounded-lg bg-[url("/assets/images/white-circle-bg.jpg")] bg-cover bg-no-repeat',
     },
     modalTitleDiv:
-      'w-full flex flex-wrap gap-5 items-center justify-between p-4 border-b-2 border-primary-500',
+      'w-full flex gap-5 items-center justify-between p-4 border-b-2 border-primary-500',
   };
 
   return (
     <>
-      {!isModalActive ? null : (
-        <div ref={modalBackground} className={styles.container}>
-          <div
-            ref={modalContent}
-            className={`${styles.content.display} ${styles.content.font} ${styles.content.background}`}
-          >
-            {sections?.map((section, index) => {
-              return (
-                <>
-                  <div
-                    key={index}
-                    aria-label={section.title}
-                    className={styles.modalTitleDiv}
-                  >
-                    <h3>{section.title || 'Modal Title'}</h3>
-                    {index === 0 && (
-                      <Image
-                        alt="close modal"
-                        src="/assets/icons/xmark.svg"
-                        width={50}
-                        height={50}
-                        className={styles.xmark}
-                        onClick={() => setModalState(false)}
-                      />
-                    )}
-                  </div>
-                  <div className="basis-full">{section.content}</div>
-                </>
-              );
-            })}
-          </div>
-        </div>
-      )}
+      <div ref={modalBackground} className={styles.container}>
+        <main
+          ref={modalContent}
+          className={`${styles.content.display} ${styles.content.font} ${styles.content.background}`}
+        >
+          {sections?.map((section, index) => {
+            return (
+              <section aria-label={`section ${section.title}`} key={index} className="flex flex-col gap-6">
+                <div
+                  className={styles.modalTitleDiv}
+                >
+                  <h3>{section.title || 'Modal Title'}</h3>
+                  {index === 0 && (
+                    <Image
+                      alt="close modal"
+                      src="/assets/icons/xmark.svg"
+                      width={50}
+                      height={50}
+                      className={styles.xmark}
+                      onClick={() => router.back()}
+                    />
+                  )}
+                </div>
+                <div className="basis-full">{section.content}</div>
+              </section>
+            );
+          })}
+          {children}
+        </main>
+      </div>
     </>
   );
 };
@@ -122,6 +119,7 @@ Modal.propTypes = {
       content: PropTypes.node.isRequired,
     })
   ).isRequired,
+  children: PropTypes.node,
 };
 
 export default Modal;

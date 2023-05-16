@@ -16,14 +16,14 @@ export default function LandingPage() {
             <li>
               <ul className="flex gap-4">
                 <li>
-                  <Link href={'/auth/login'}>
+                  <Link href={'/login'}>
                     <Button bgColor="primary" isSolid={true}>
                       Iniciar Sesión
                     </Button>
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/auth/register'}>
+                  <Link href={'/register'}>
                     <Button bgColor="primary" isSolid={false}>
                       Crear Cuenta
                     </Button>
