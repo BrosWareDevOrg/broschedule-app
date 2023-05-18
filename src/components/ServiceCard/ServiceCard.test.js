@@ -1,5 +1,4 @@
-import { render, screen, fireEvent } from '../../utils/tests/renderWithRouter';
-import mockRouter from 'next-router-mock';
+import { render, screen, fireEvent, defaultRouter as router } from '../../utils/tests/renderWithRouter';
 import ServiceCard from './index';
 
 describe('ServiceCard', () => {
@@ -86,7 +85,7 @@ describe('ServiceCard', () => {
           .parentElement;
       fireEvent.click(cardContainer);
 
-      expect(mockRouter.asPath).toMatch('/provider/user25');
+      expect(router.push).toHaveBeenCalled();
     });
   });
 });

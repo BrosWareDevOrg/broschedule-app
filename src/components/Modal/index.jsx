@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -36,13 +37,12 @@ const Modal = ({
   useEffect(() => {
     addClickEventListener();
     return () => {
-      modalBackground.current &&
-        modalBackground.current.removeEventListener(
-          'click',
-          handleClickToCloseModal
-        );
+      modalBackground.current?.removeEventListener(
+        'click',
+        handleClickToCloseModal
+      );
     };
-  }, [modalBackground.current]);
+  }, []);
 
   const handleClickToCloseModal = (e) => {
     //Function to handle click on background rect event
@@ -78,22 +78,25 @@ const Modal = ({
 
   return (
     <>
-      <div ref={modalBackground} className={styles.container}>
+      <div aria-label='modal background' ref={modalBackground} className={styles.container}>
         <main
           ref={modalContent}
           className={`${styles.content.display} ${styles.content.font} ${styles.content.background}`}
         >
           {sections?.map((section, index) => {
             return (
-              <section aria-label={`section ${section.title}`} key={index} className="flex flex-col gap-6">
-                <div
-                  className={styles.modalTitleDiv}
-                >
+              <section
+                aria-label={`section ${section.title}`}
+                key={index}
+                className="flex flex-col gap-6"
+              >
+                <div className={styles.modalTitleDiv}>
                   <h3>{section.title || 'Modal Title'}</h3>
                   {index === 0 && (
                     <Image
                       alt="close modal"
                       src="/assets/icons/xmark.svg"
+                      aria-label='x mark'
                       width={50}
                       height={50}
                       className={styles.xmark}
