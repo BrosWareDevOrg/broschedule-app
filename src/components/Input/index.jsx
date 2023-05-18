@@ -15,7 +15,6 @@ const Input = ({
 
   const handleSelectorShowOptions = (event) => {
     const selectValue = event.target.attributes.value.value;
-
     selectRef.current.attributes.value.value = selectValue;
     inputRef.current.attributes.value.value = selectValue;
     selectRef.current.innerHTML = selectValue;
@@ -24,11 +23,11 @@ const Input = ({
   return (
     <>
       {type !== 'select' ? (
-        <div className="flex flex-col gap-1 w-full">
+        <fieldset className="flex flex-col gap-1 w-full">
           <label
             htmlFor={name}
             aria-label={name}
-            className="text-primary-700 font-bold text-md md:text-lg block w-full px-2 py-1 md:px-4 cursor-pointer"
+            className={`text-${color}-700 font-bold text-md md:text-lg block w-full px-2 py-1 md:px-4 cursor-pointer`}
           >
             {label}
           </label>
@@ -39,9 +38,9 @@ const Input = ({
             name={name}
             {...props}
           />
-        </div>
+        </fieldset>
       ) : (
-        <div
+        <fieldset
           className={`flex flex-col gap-1 w-full h-fit transition-all bg-${color}-200 rounded-2xl`}
         >
           <input
@@ -62,7 +61,7 @@ const Input = ({
             ref={selectRef}
             value={placeholder}
             onClick={(e) => handleSelectorShowOptions(e)}
-            className={`px-4 py-2 rounded-2xl bg-${color}-200 border-2 outline-none text-${color}-700 text-lg border-${color}-700 cursor-pointer`}
+            className={`px-4 py-2 rounded-2xl bg-primary-200 border-2 outline-none text-${color}-700 text-lg border-${color}-700 cursor-pointer`}
             {...props}
           >
             {placeholder}
@@ -89,7 +88,7 @@ const Input = ({
               );
             })}
           </dl>
-        </div>
+        </fieldset>
       )}
     </>
   );
