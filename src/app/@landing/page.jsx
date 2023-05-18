@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Button from '@/components/Button';
 import NavbarIcon from '@/components/NavbarIcons';
+import Input from '@/components/Input';
 
 export default function LandingPage() {
   return (
@@ -34,7 +35,12 @@ export default function LandingPage() {
           </ul>
         </nav>
       </header>
-      <article className="w-full h-screen"></article>
+      <article className="w-full h-screen flex items-center justify-center">
+        <form className="w-3/5 flex flex-col gap-3 p-6 border border-primary-700 rounded-3xl">
+          <Input name='first input' />
+          <Input type={'select'} name='second input' />
+        </form>
+      </article>
       <article className="w-full h-screen"></article>
       <article className="w-full h-screen"></article>
       <article className="w-full h-screen"></article>
