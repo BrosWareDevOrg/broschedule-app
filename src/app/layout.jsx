@@ -13,13 +13,12 @@ export const metadata = {
   description: 'Improve the way to contact services in our city.',
 };
 
-export default function RootLayout({ children, landing }) {
+export default function RootLayout({ children, landing, authModal }) {
   //One way to handle session data is with next 'cookies' function, which use is similar to 'document.coockie'
   //We can choice to use other methods mor specific in future to handle users and auths, like firebase hooks.
   const coockieList = cookies();
   return (
-    <html>
-      <head />
+    <html lang="en">
       <body>
         <ErrorBoundary>
           <Providers>
@@ -28,9 +27,13 @@ export default function RootLayout({ children, landing }) {
                 <main className="relative w-screen max-w-[100vw] h-screen md:h-fit bg-white flex flex-col-reverse md:flex-row">
                   <Navbar />
                   {children}
+                  {authModal}
                 </main>
               ) : (
-                landing
+                <>
+                  {landing}
+                  {authModal}
+                </>
               )}
             </>
           </Providers>

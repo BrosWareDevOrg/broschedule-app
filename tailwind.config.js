@@ -49,6 +49,28 @@ module.exports = {
         },
       },
     },
+    animation: {
+      apparecense: 'apparecense .3s ease-in-out',
+      rotate360: 'rotate360 2s linear infinite',
+      moveCorners: 'moveCorners 2s linear infinite',
+    },
+    keyframes: {
+      apparecense: {
+        '0%': { transform: 'scale(.15)', opacity: '.5' },
+        '100%': { transform: 'scale(1)', opacity: '1' },
+      },
+      rotate360: {
+        '0%': { transform: 'rotate(0deg)' },
+        '100%': { transform: 'rotate(360deg)' },
+      },
+      moveCorners: {
+        '20%': { transform: 'translate(4px,0px)' },
+        '40%': { transform: 'translate(0px,-4px)' },
+        '60%': { transform: 'translate(-4px,0px)' },
+        '80%': { transform: 'translate(0px,4px)' },
+        '100%': { transform: 'translate(0px,0px)' },
+      },
+    },
   },
   plugins: [],
 };
