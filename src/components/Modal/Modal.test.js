@@ -56,7 +56,7 @@ describe('Modal Test Suit', () => {
 
     const modalContent = modalBackground.firstChild;
     expect(modalContent).toHaveClass(
-      'relative flex flex-col p-8 gap-8 font-semibold text-primary-700 text-2xl sm:text-4xl rounded-lg bg-[url("/assets/images/white-circle-bg.jpg")] bg-cover bg-no-repeat'
+      'relative flex flex-col p-8 gap-8 animate-apparecense font-semibold text-primary-700 text-2xl sm:text-4xl rounded-lg bg-[url("/assets/images/white-circle-bg.jpg")] bg-cover bg-no-repeat'
     );
 
     const xMark = screen.getByLabelText('x mark');

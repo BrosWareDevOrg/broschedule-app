@@ -49,6 +49,15 @@ module.exports = {
         },
       },
     },
+    animation: {
+      apparecense: 'apparecense .3s ease-in-out',
+    },
+    keyframes: {
+      apparecense: {
+        '0%': { transform: 'scale(.15)', opacity: '.5' },
+        '100%': { transform: 'scale(1)', opacity: '1' },
+      },
+    },
   },
   plugins: [],
 };

@@ -67,7 +67,7 @@ const Modal = ({
     container:
       'fixed z-[10000] top-0 left-0 w-screen h-screen grid place-items-center bg-black-500 backdrop-blur-sm cursor-default',
     content: {
-      display: 'relative flex flex-col p-8 gap-8',
+      display: 'relative flex flex-col p-8 gap-8 animate-apparecense',
       font: 'font-semibold text-primary-700 text-2xl sm:text-4xl',
       background:
         'rounded-lg bg-[url("/assets/images/white-circle-bg.jpg")] bg-cover bg-no-repeat',
@@ -99,6 +99,7 @@ const Modal = ({
                       aria-label='x mark'
                       width={50}
                       height={50}
+                      priority={true}
                       className={styles.xmark}
                       onClick={() => router.back()}
                     />
