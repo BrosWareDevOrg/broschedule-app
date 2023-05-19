@@ -2,8 +2,9 @@
 'use client';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
+import Loader from '@/components/Loader';
 
 const Modal = ({
   sections = [{ title: 'Modal Title', content: <p>First Child</p> }],
@@ -77,8 +78,12 @@ const Modal = ({
   };
 
   return (
-    <>
-      <div aria-label='modal background' ref={modalBackground} className={styles.container}>
+    <div
+      aria-label="modal background"
+      ref={modalBackground}
+      className={styles.container}
+    >
+      <Suspense fallback={<Loader />}>
         <main
           ref={modalContent}
           className={`${styles.content.display} ${styles.content.font} ${styles.content.background}`}
@@ -96,7 +101,7 @@ const Modal = ({
                     <Image
                       alt="close modal"
                       src="/assets/icons/xmark.svg"
-                      aria-label='x mark'
+                      aria-label="x mark"
                       width={50}
                       height={50}
                       priority={true}
@@ -111,8 +116,8 @@ const Modal = ({
           })}
           {children}
         </main>
-      </div>
-    </>
+      </Suspense>
+    </div>
   );
 };
 
