@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import CalendarMonthsHeader from '../CalendarMonthsHeader';
 import CalendarDayItem from '../CalendarDayItem';
-import { fillTableRows, now } from '@/utils/functions/caneldarContentGenerator';
+import { fillTableRows, now } from '@/utils/functions/calendarContentGenerator';
 
 const CalendarComponent = () => {
   const [tableRows, setTableRows] = useState([]);
