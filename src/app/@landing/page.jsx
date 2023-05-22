@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Button from '@/components/Button';
 import NavbarIcon from '@/components/NavbarIcons';
+import SplineCanva from '@/components/Spline';
 
 export default function LandingPage() {
   return (
@@ -34,7 +35,15 @@ export default function LandingPage() {
           </ul>
         </nav>
       </header>
-      <article className="w-full h-screen"></article>
+      <article className="w-full h-screen flex items-center justify-center">
+        <div className="w-auto h-auto">
+          <SplineCanva
+            scene={
+              'https://prod.spline.design/88OwVBhOEhA5mwn6/scene.splinecode'
+            }
+          />
+        </div>
+      </article>
       <article className="w-full h-screen"></article>
       <article className="w-full h-screen"></article>
       <article className="w-full h-screen"></article>
