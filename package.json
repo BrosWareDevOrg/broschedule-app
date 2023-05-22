@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.339",
     "dayjs": "^1.11.7",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
